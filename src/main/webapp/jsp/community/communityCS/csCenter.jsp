@@ -85,12 +85,12 @@
 	  	<a href="/FoodFighter/community/communityNotice"><span class="glyphicon glyphicon-exclamation-sign"></span>&emsp;공지사항</a>
 	    <a href="/FoodFighter/community/communityBoard"><span class="glyphicon glyphicon-list"></span>&emsp;게시판</a>
 	    <a href="/FoodFighter/community/communityRank"><span class="glyphicon glyphicon-star"></span>&emsp;랭킹</a>
-	    <a href=""><span class="glyphicon glyphicon-question-sign"></span>&emsp;고객센터</a>
+	    <a href="/FoodFighter/community/csCenter"><span class="glyphicon glyphicon-question-sign"></span>&emsp;고객센터</a>
     </div>
 
     <!-- 중앙 QnA와 FAQ -->
-    <div style="text-align: center; margin-top: 300px;">
-        <figure class="item">
+    <div style="text-align: center; margin-top: 300px; margin-bottom: 300px;">
+        <figure class="item" style="margin-right: 50px;">
             <img src="/FoodFighter/resources/img/community/qna.png" class="imagebtn" onclick="location.href='/FoodFighter/community/qna'" />
             <figcaption class="caption">QnA</figcaption>
         </figure>

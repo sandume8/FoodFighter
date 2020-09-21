@@ -130,6 +130,7 @@ $(document).ready(function(){
     });
 });
 
+
 //인증 부분 숨김처리
 $(document).ready(function() {
 	$('#emailCode').hide();
@@ -141,8 +142,8 @@ $(document).ready(function() {
 $('#sendEmailBtn').click(function() {
 $('#emailDiv').empty();
 	if ($('#email').val() == 'undefined') {
-		$('#emailDiv').text('이메일은 반드시 동의를 해주셔야 가입이 가능합니다.');
-		$('#emailDiv').css('color', 'red');
+		alert('이메일은 반드시 동의를 해주셔야 가입이 가능합니다.');
+		location.href="http://localhost:8080/FoodFighter/member/signupChoice";
 
 	} else {
 		$.ajax({
@@ -169,7 +170,7 @@ $('#emailDiv').empty();
 						dataType:'text',
 						success : function(data) {
 							sessionStorage.setItem("authCode", data ); //히든으로 하면 보안때문에 session으로 변경
-							alert(sessionStorage.getItem("authCode")); //임시
+							/* alert(sessionStorage.getItem("authCode")); //임시 */
 						},
 						error : function(e) {
 							console.log(e);
