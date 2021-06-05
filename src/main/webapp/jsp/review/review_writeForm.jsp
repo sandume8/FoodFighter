@@ -116,16 +116,16 @@ String resSeq = request.getParameter("resSeq");
 		  <div class="form-group">
 			  <textarea id="content" name="content" class="form-control" rows="10" placeholder="${memberDTO.nickname} 님 주문하신 메뉴는 어떠셨나요? 상점에 대한 진솔하면서도 고운말 부탁드립니다"></textarea>
 			 	   <div class="upload-group" align="left"> 
-			  			<div class="filebox" width="100%" align="left">
+			  		<div class="filebox" width="100%" align="left">
        						<label for="ex_file">+</label>
-							<div id="imageView"></div>
+						<div id="imageView"></div>
         					<input type="file" name="img[]" class="file_input" id="ex_file" multiple> 	
-   						 </div>
+   					</div>
 		  				<br>
-		  				<div class="ReviewPictureCounter" style="/* top: 58%; left: 18%; */ display: block;">
-          					  <span class="ReviewPictureCounter__CurrentLength">0</span>
-          					  <span class="ReviewPictureCounter__Divider">/</span>
-         					   <span class="ReviewPictureCounter__MaxLength">5</span>
+		  			<div class="ReviewPictureCounter" style="/* top: 58%; left: 18%; */ display: block;">
+          					<span class="ReviewPictureCounter__CurrentLength">0</span>
+          					<span class="ReviewPictureCounter__Divider">/</span>
+         					<span class="ReviewPictureCounter__MaxLength">5</span>
           				</div>
 				  </div>
 					

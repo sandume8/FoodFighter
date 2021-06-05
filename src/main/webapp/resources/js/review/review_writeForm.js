@@ -76,19 +76,19 @@ $(document).ready(function (e){
   function preview(arr){
       arr_total += arr.length; 
   	if(arr_total < 6){
-	    	arr.forEach(function(f){
-	        //div에 이미지 추가
-	        let str = '<div style="display:inline-block; list-style:none; line-height: 89px; text-align: center;">';
-	        //이미지 파일 미리보기
-	        if(f.type.match('image.*')){
-      	 let reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
-	          	reader.onload = function (e) { //파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
-	       		  str += '<img src="'+e.target.result+'"id=viewImg style="display:inline-block; list-style:none;"'+'"width=89px; height=89px; />';
-	   	          str += '</div>';
-	   	           $(str).prependTo('.filebox');
-	  	          }
-		          reader.readAsDataURL(f);
-		        }
+		arr.forEach(function(f){
+	        	//div에 이미지 추가
+	       		let str = '<div style="display:inline-block; list-style:none; line-height: 89px; text-align: center;">';
+	        	//이미지 파일 미리보기
+	        	if(f.type.match('image.*')){
+      	 			let reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
+	          		reader.onload = function (e) { //파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
+	       				str += '<img src="'+e.target.result+'"id=viewImg style="display:inline-block; list-style:none;"'+'"width=89px; height=89px; />';
+	   	          		str += '</div>';
+	   	          		$(str).prependTo('.filebox');
+	  	        	}
+				reader.readAsDataURL(f);
+		        }//image
 	      });//arr.forEach
       }//if
       else{
@@ -96,5 +96,5 @@ $(document).ready(function (e){
           arr_total -= arr.length; 
       }
       $('.ReviewPictureCounter__CurrentLength').text(arr_total); //사진개수 입력란
-	}//preview
+	}
 });
